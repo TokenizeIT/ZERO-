@@ -72,4 +72,4 @@ function retweet(searchText) {
 
 
 
-setInterval(function() { retweet('#30DaysOfCode OR #100DaysOfCode'); }, 60000)
+setInterval(function() { retweet('#dao OR #polygon'); }, 180000)
