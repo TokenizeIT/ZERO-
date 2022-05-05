@@ -1,4 +1,5 @@
 const Twit = require('twit');
+const port = process.env.Port || 5000
 
 require('dotenv').config();
 
@@ -19,8 +20,8 @@ function retweet(searchText) {
     
     let params = {
         q : searchText + '',
-        result_type : 'mixed',
-        count : 25,
+        result_type : 'recent',
+        count : 10,
     }
 
     T.get('search/tweets', params, function(err_search, data_search, response_search){
@@ -72,4 +73,4 @@ function retweet(searchText) {
 
 
 
-setInterval(function() { retweet('#dao OR #polygon'); }, 180000)
+setInterval(function() { retweet('#hodlsportclub OR #hodlsportclubnft OR #hodlsportclubgiveaway OR #hodlsportclubcollection'); }, 180000)
